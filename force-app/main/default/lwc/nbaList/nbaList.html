@@ -1,0 +1,41 @@
+<template>
+    <!-- creates the table with data from the Custom Object -->
+    <!--todo: also pull columns from NBA__C -->
+    <!--todo: add Team Images, not sortable -->
+    <!--todo:add a separate button to show all--> 
+    <!-- https://www.lightningdesignsystem.com/icons/#utility -->
+    <lightning-card>
+        <div slot="title">NBA 2021-2022 Regular Season Results</div>
+            <div class="slds-p-around_medium lgc-bg">
+                <p>Showing {pageSize} teams per page</p>
+                <lightning-button-menu alternative-text="Show menu" onselect={handlePageSize}>
+                    <lightning-menu-item value=6 label="6"></lightning-menu-item>
+                    <lightning-menu-item value=12 label="12"></lightning-menu-item>
+                    <lightning-menu-item value=18 label="18"></lightning-menu-item>
+                    <lightning-menu-item value=24 label="24"></lightning-menu-item>
+                    <lightning-menu-item value=30 label="Show All"></lightning-menu-item>
+                </lightning-button-menu>
+            </div>
+        <lightning-datatable
+                key-field="id"
+                columns={columns}
+                data={data}
+                sorted-direction={sortDirection}
+                default-sort-direction={defaultSortDirection}
+                sorted-by={sortedBy}
+                onsort={handleSort}>
+        </lightning-datatable>
+        <div class="slds-m-around_medium">
+            <p class='slds-m-around_medium'>Page {page} of {totalPages} <br>
+                Showing {startingTeam} to {endingTeam}</p>
+            <c-pagination 
+                onfirst={handleFirst} 
+                onprevious={handlePrevious} 
+                onnext={handleNext} 
+                onlast={handleLast}>
+        </c-pagination>
+        </div>
+        <!-- <div slot="footer" class="slds-align_absolute-center">
+        </div> -->
+    </lightning-card>
+</template>
