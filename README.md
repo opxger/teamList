@@ -1,18 +1,17 @@
-# Salesforce DX Project: Next Steps
+# Salesforce Demo Project
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+Create a page/application that lists standard or custom objects (you can choose what object to list)
 
-## How Do You Plan to Deploy Your Changes?
+The list can have several column headers (name, created date, etc, of your choice)
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+The list can be sortable by any of these column headers (e.g. sort by created date)
 
-## Configure Your Salesforce DX Project
+Bonus: Add visual indication (e.g. ▲ or ▼) on clicked column to display sorting direction
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+Clicking on the same column header repeatedly will reverse the order of sorting
 
-## Read All About It
+The list is paginated; users can cycle between X number of rows by using custom links or buttons. First, Last, Previous, and Next pagination actions are required, and their corresponding custom button/link should be enabled only if action can be performed.
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+Bonus: Display current page number and total pages.
+
+The list is interactive: the user can perform an action on each row of the list (click a button or select a checkbox on each row); a separate action button will perform some action on each of the selected rows.
