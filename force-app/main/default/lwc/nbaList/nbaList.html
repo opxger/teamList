@@ -26,15 +26,38 @@
                 onsort={handleSort}>
         </lightning-datatable>
         <div class="slds-m-around_medium">
-            <p class='slds-m-around_medium'>Page {page} of {totalPages} <br>
-                Showing {startingTeam} to {endingTeam}</p>
-            <c-pagination 
-                onfirst={handleFirst} 
-                onprevious={handlePrevious} 
-                onnext={handleNext} 
-                onlast={handleLast}>
-        </c-pagination>
+            <p class='slds-m-around_medium'>Page {currentPage} of {totalPages} <br>
+                Showing {firstTeam} to {lastTeam}</p>
         </div>
+        <div class="slds-m-around_medium">
+                    <lightning-button 
+                    label="First"
+                    icon-name="utility:arrow_left"
+                    onclick={handleFirst}
+                    disabled={isFirstPage}
+                    ></lightning-button>
+                    <lightning-button 
+                    label="Previous"
+                    icon-name="utility:chevronleft"
+                    onclick={handlePrevious}
+                    disabled={isFirstPage}
+                    ></lightning-button>
+                    <lightning-button 
+                    label="Next"
+                    icon-name="utility:chevronright"
+                    icon-position="right"
+                    onclick={handleNext}
+                    disabled={isLastPage}
+                    ></lightning-button>
+                    <lightning-button 
+                    label="Last"
+                    icon-name="utility:arrow_right"
+                    icon-position="right"
+                    onclick={handleLast}
+                    disabled={isLastPage}
+                    ></lightning-button>
+        </div>
+
         <!-- <div slot="footer" class="slds-align_absolute-center">
         </div> -->
     </lightning-card>

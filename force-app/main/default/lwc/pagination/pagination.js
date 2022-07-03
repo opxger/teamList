@@ -14,11 +14,4 @@ export default class Pagination extends LightningElement {
     lastHandler(e){
         this.dispatchEvent(new CustomEvent('last'))
     }
-    isFirstPage(){
-        return this.currentPage<=1
-    }
-    isFirstPage(){
-        return this.currentPage>=this.totalPages
-
-    }
 }
