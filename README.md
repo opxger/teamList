@@ -1,6 +1,7 @@
 # Salesforce Demo Project
 
 TODO: Apply sorting to all pages, not just current page
+
 TODO: Fix page size switcher
 
 
