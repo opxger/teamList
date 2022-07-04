@@ -2,9 +2,6 @@
 
 TODO: Apply sorting to all pages, not just current page
 
-TODO: Fix page size switcher
-
-
 Create a page/application that lists standard or custom objects (you can choose what object to list)
 
 The list can have several column headers (name, created date, etc, of your choice)
