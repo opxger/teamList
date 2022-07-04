@@ -23,8 +23,10 @@
                 sorted-direction={sortDirection}
                 default-sort-direction={defaultSortDirection}
                 sorted-by={sortedBy}
-                onsort={handleSort}>
-        </lightning-datatable>
+                onsort={handleSort}
+                onrowaction={handleRowAction}
+                hide-checkbox-column>
+        </lightning-datatable>  
         <div class="slds-m-around_medium">
             <p class='slds-m-around_medium'>Page {currentPage} of {totalPages} <br>
                 Showing {firstTeam} to {lastTeam}</p>
